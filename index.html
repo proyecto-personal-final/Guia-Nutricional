@@ -200,6 +200,99 @@
   <div class="foot">Introducción — Guía Nutricional</div>
 </section>
 <!-- ====== Fin Introducción ====== -->
+  
+  <!-- ===== PÁGINA INFORMATIVA 1 ===== -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥦 Nutrientes clave en la adolescencia</h1>
+    <div class="badges">
+      <span class="badge">Proteínas</span>
+      <span class="badge">Carbohidratos</span>
+      <span class="badge">Grasas saludables</span>
+      <span class="badge">Vitaminas</span>
+      <span class="badge">Minerales</span>
+    </div>
+  </header>
+
+  <div class="page-inner">
+    <h3>¿Por qué son importantes?</h3>
+    <div class="panel">
+      <p>Durante la adolescencia el cuerpo crece rápido: aumenta la masa muscular, se fortalecen los huesos y se adapta el metabolismo. 
+      Una alimentación equilibrada asegura <strong>energía</strong> para el estudio y el deporte, <strong>crecimiento</strong> adecuado y <strong>bienestar</strong> físico y mental.</p>
+    </div>
+
+    <h3>Macronutrientes</h3>
+    <div class="panel">
+      <table>
+        <tr><th>Nutriente</th><th>Función principal</th><th>Ejemplos de alimentos</th></tr>
+        <tr>
+          <td><strong>Proteínas</strong></td>
+          <td>Construcción y reparación de músculos, huesos y tejidos. Importantes tras el ejercicio.</td>
+          <td>Pescado, pollo, huevos, legumbres (lentejas, garbanzos), lácteos.</td>
+        </tr>
+        <tr>
+          <td><strong>Carbohidratos</strong></td>
+          <td>Principal fuente de energía para el cerebro y la actividad diaria.</td>
+          <td>Arroz integral, avena, pan integral, papas, camote, frutas.</td>
+        </tr>
+        <tr>
+          <td><strong>Grasas saludables</strong></td>
+          <td>Desarrollo cerebral, hormonas y absorción de vitaminas A, D, E y K.</td>
+          <td>Palta, aceite de oliva, frutos secos, semillas, pescado azul.</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Micronutrientes esenciales</h3>
+    <div class="panel">
+      <ul>
+        <li><strong>Calcio</strong>: fortalece huesos y dientes. <em>Fuentes</em>: lácteos, almendras, brócoli.</li>
+        <li><strong>Hierro</strong>: previene anemia y mejora el rendimiento. <em>Fuentes</em>: carnes magras, lentejas, espinaca.</li>
+        <li><strong>Vitamina D</strong>: ayuda a fijar el calcio en huesos. <em>Fuentes</em>: pescado, huevo, sol moderado.</li>
+        <li><strong>Vitaminas A y C</strong>: piel e inmunidad. <em>Fuentes</em>: zanahoria, mango, cítricos, pimientos.</li>
+        <li><strong>Zinc y Magnesio</strong>: crecimiento, recuperación y sueño. <em>Fuentes</em>: carnes, semillas, legumbres, granos integrales.</li>
+      </ul>
+    </div>
+
+    <h3>Distribución recomendada de macronutrientes</h3>
+    <div class="panel">
+      <p>Para la mayoría de adolescentes se sugiere:</p>
+      <ul>
+        <li><strong>50–55%</strong> de las calorías de <strong>carbohidratos</strong></li>
+        <li><strong>25–30%</strong> de <strong>grasas saludables</strong></li>
+        <li><strong>15–20%</strong> de <strong>proteínas</strong></li>
+      </ul>
+      <div class="chartwrap"><canvas id="nutrientesPie" width="320" height="320"></canvas></div>
+    </div>
+
+    <div class="tips" style="margin-top:16px;">
+      <ul>
+        <li>Llena tu plato con <strong>colores</strong>: más colores = más vitaminas y minerales.</li>
+        <li>Prefiere <strong>integrales</strong> (arroz/pan/avena) para energía sostenida y mejor digestión.</li>
+        <li>Incluye <strong>proteínas</strong> en cada comida para apoyar el crecimiento.</li>
+        <li>Hidrátate: el agua mejora concentración y rendimiento físico.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">Página Informativa — Nutrientes clave</div>
+</section>
+
+<script>
+  // Gráfico de distribución recomendada: [Carbohidratos, Proteína, Grasa]
+  const datasets = [{ id:'nutrientesPie', data:[55,20,25] }];
+  document.addEventListener('DOMContentLoaded',()=>{
+    datasets.forEach(r=>{
+      const el=document.getElementById(r.id);
+      if(!el) return;
+      new Chart(el.getContext('2d'),{
+        type:'pie',
+        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']} ]},
+        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
+      });
+    });
+  });
+</script>
 
 <h1 style="text-align:center;font-size:40px;margin:20px 0;color:var(--accent);font-family:Rubik, sans-serif;">☀️ Desayunos</h1>
 
