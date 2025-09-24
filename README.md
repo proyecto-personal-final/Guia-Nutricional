@@ -1,5 +1,4 @@
 # 🌱 Guía Nutricional — Proyecto Personal IB
-![Banner de la Guía Nutricional](banner.png)
 
 La **Guía Nutricional para Adolescentes** es un proyecto completo desarrollado como parte de mi **Proyecto Personal IB**.  
 Contiene un **recetario de 40 recetas** (10 desayunos, 12 almuerzos, 8 snacks y 10 cenas), todas diseñadas para adolescentes de 13–16 años, con ingredientes accesibles y económicos en Arequipa, Perú.  
@@ -40,11 +39,6 @@ Cada receta incluye **información nutricional completa, adaptaciones para difer
 ## 🌐 Demo en línea
 La guía está publicada en GitHub Pages:  
 👉 `https://proyecto-personal-final.github.io/Guia-Nutricional/`
-
----
-
-## 📸 Vista previa
-![Vista previa de la Guía](preview.png)
 
 ---
 
