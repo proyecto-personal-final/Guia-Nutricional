@@ -3,12 +3,45 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Guía Nutricional — Desayunos (10)</title>
+<title>Guía Nutricional — Portada y Desayunos (10)</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
+
+  /* ===== Portada (prefijos portada-*) ===== */
+  .portada{width:794px;min-height:1123px;margin:24px auto;background:var(--card);
+    border:1px solid var(--line);border-radius:18px;box-shadow:0 16px 50px rgba(15,23,42,.14);overflow:hidden;position:relative}
+  .portada-hero{position:relative;height:56vh;min-height:540px;
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Healthy_food.jpg');
+    background-size:cover;background-position:center;}
+  .portada-hero::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(120deg, #008f39 0%, #00b347 60%, rgba(255,255,255,0) 100%);
+    mix-blend:multiply;}
+  .portada-hero-inner{position:absolute;inset:0;display:grid;place-items:center;padding:32px;}
+  .portada-glass{background:rgba(255,255,255,.18);backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.5);box-shadow:0 10px 40px rgba(0,0,0,.15);
+    border-radius:22px;padding:20px 26px;max-width:85%;text-align:center;color:#fff;}
+  .portada-kicker{letter-spacing:.12em;font-weight:700;text-transform:uppercase;opacity:.95}
+  .portada-title{font-family:Rubik, Poppins, sans-serif;font-size:48px;line-height:1.06;margin:6px 0 8px;font-weight:900}
+  .portada-name{font-family:Rubik, Poppins, sans-serif;font-size:28px;margin:6px 0 0;font-weight:800}
+  .portada-badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+  .portada-badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);border-radius:999px}
+  .portada-content{padding:22px 26px 24px;background:
+    radial-gradient(1200px 500px at -10% 110%, #ecfeff 0%, rgba(236,254,255,0) 60%),
+    radial-gradient(800px 400px at 110% 120%, #fef9c3 0%, rgba(254,249,195,0) 70%);}
+  .portada-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width: 860px){ .portada{width:100%;border-radius:0} .portada-grid{grid-template-columns:1fr} }
+  .portada-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 28px rgba(15,23,42,.08)}
+  .portada-imgbg{display:block;width:100%;height:280px;background-size:cover;background-position:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .portada-figtitle{font-weight:900;margin:6px 0;color:#0f172a;text-align:center}
+  .portada-figcap{padding:10px 14px;font-size:13px;color:#475569;background:#f8fafc;border-top:1px solid var(--line);text-align:center}
+  .portada-footer{display:flex;justify-content:space-between;align-items:center;margin:10px 16px 16px;color:#64748b;font-size:12px}
+  .portada-brand{font-weight:900;letter-spacing:.3px}
+  .portada-wave{position:absolute;bottom:0;left:0;width:100%;height:120px}
+
+  /* ===== Páginas de recetas (mantengo tus clases) ===== */
   .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
   .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
   header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
@@ -26,8 +59,6 @@
   th{background:#e8faf0}
   .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
   .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
-  .reemplazos{border-left:6px solid var(--pink);background:#fdf2f8;padding:10px;border-radius:10px;margin-top:12px}
-  .reemplazos .titulo-reemplazo{color:var(--fucsia);font-weight:800}
   .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
   .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
   .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
@@ -37,128 +68,51 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
+<!-- ===== Portada ===== -->
+<section class="portada">
+  <div class="portada-hero">
+    <div class="portada-hero-inner">
+      <div class="portada-glass">
+        <div class="portada-kicker">Proyecto Personal IB</div>
+        <h1 class="portada-title">Guía Nutricional para Adolescentes</h1>
+        <div class="portada-name">Sofía Nuñez — 9th L</div>
+        <div class="portada-badges">
+          <span class="portada-badge">Arequipa · Perú</span>
+          <span class="portada-badge">Lenguaje 13–16</span>
+          <span class="portada-badge">Evidencia y practicidad</span>
+        </div>
+      </div>
+    </div>
+    <svg class="portada-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#ffffff" fill-opacity="1" d="M0,160L48,154.7C96,149,192,139,288,149.3C384,160,480,192,576,181.3C672,171,768,117,864,112C960,107,1056,149,1152,154.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+
+  <div class="portada-content">
+    <div class="portada-grid">
+      <div class="portada-card">
+        <div class="portada-figtitle">Figura 1</div>
+        <div class="portada-imgbg" style="background-image:url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="portada-figcap">Frutas y verduras frescas, fuente esencial de vitaminas y minerales.</div>
+      </div>
+      <div class="portada-card">
+        <div class="portada-figtitle">Figura 2</div>
+        <div class="portada-imgbg" style="background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="portada-figcap">Plato balanceado con granos, proteínas y vegetales, ejemplo de alimentación equilibrada.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portada-footer">
+    <div>© 2025 · Sofía Nuñez</div>
+    <div class="portada-brand">🥗 Guía Nutricional</div>
+  </div>
+</section>
 
 <h1 style="text-align:center;font-size:40px;margin:20px 0;color:var(--accent);font-family:Rubik, sans-serif;">☀️ Desayunos</h1>
 
-<!-- Aquí empezarán las 10 recetas nuevas que me diste -->
-<!-- Ejemplo estructura con "Adaptaciones Locales" si aplica -->
-<section class="page">
-  <header class="pagehead">
-    <h1 class="title">🥙 Stuffed Chicken Sausage Pitas</h1>
-    <div class="badges">
-      <span class="badge">Alto en proteína</span>
-      <span class="badge">Práctico</span>
-      <span class="badge">&lt; 20 min</span>
-    </div>
-  </header>
-  <div class="page-inner">
-    <div class="left">
-      <h3>Ingredientes (2 porciones)</h3>
-      <div class="panel">
-        <ul>
-          <li class="ing-row"><span>• Pan pita integral</span><span class="amt">2 unidades</span></li>
-          <li class="ing-row"><span>• Carne de salchicha de pollo sazonada</span><span class="amt">120 g</span></li>
-          <li class="ing-row"><span>• Tomate en cubos</span><span class="amt">1 mediano</span></li>
-          <li class="ing-row"><span>• Espinaca fresca</span><span class="amt">1 puñado</span></li>
-          <li class="ing-row"><span>• Cebolla china picada</span><span class="amt">1 tallo</span></li>
-          <li class="ing-row"><span>• Palta</span><span class="amt">1/4 unidad</span></li>
-          <li class="ing-row"><span>• Limón</span><span class="amt">1/2 unidad</span></li>
-        </ul>
-      </div>
-      <h3>Adaptaciones</h3>
-      <div class="panel">
-        <ul>
-          <li><strong>Vegano:</strong> reemplazar pollo por lentejas guisadas o garbanzos.</li>
-          <li><strong>Sin gluten:</strong> usar pan pita sin gluten.</li>
-        </ul>
-      </div>
-      <div class="adaptaciones-locales">
-        <div class="titulo-local">Adaptaciones Locales</div>
-        <p>Si no encuentras pan pita fácilmente en Arequipa, puedes usar pan integral de molde del mercado local.</p>
-      </div>
-      <div class="image-slot">Foto del plato — stuffed pitas</div>
-    </div>
-    <div class="right">
-      <h3>Procedimiento</h3>
-      <div class="panel">
-        <ol>
-          <li>Mezclar la carne de salchicha de pollo con tomate, espinaca y cebolla china.</li>
-          <li>Rellenar los panes pita con la mezcla.</li>
-          <li>Dorar en sartén o parrilla 3–4 minutos por lado hasta que esté cocido.</li>
-          <li>Acompañar con palta triturada con limón.</li>
-        </ol>
-      </div>
-      <h3>Tips</h3>
-      <div class="tips"><ul><li>Ideal para llevar en la lonchera; aporta proteínas de calidad.</li></ul></div>
-      <h3>Tabla nutricional</h3>
-      <table>
-        <tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr>
-        <tr><td>380 kcal</td><td>32 g</td><td>22 g</td><td>15 g</td><td>5 g</td></tr>
-      </table>
-      <div class="chartwrap"><canvas id="pie11" width="320" height="320"></canvas></div>
-    </div>
-  </div>
-  <div class="foot">Pág. 1 — Stuffed Chicken Sausage Pitas</div>
-</section>
-
-<!-- Aquí seguirán las otras 9 recetas que me indicaste con el mismo formato -->
-
-<script>
-  const datasets = [
-    {id:'pie11',data:[32,22,15]}
-  ];
-  document.addEventListener('DOMContentLoaded',()=>{
-    datasets.forEach(r=>{
-      const el=document.getElementById(r.id);
-      if(!el) return;
-      new Chart(el.getContext('2d'),{
-        type:'pie',
-        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
-        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
-      });
-    });
-  });
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Guía Nutricional — Recetas</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
-  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
-  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
-  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
-  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
-  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
-  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
-  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
-  ul{margin:0;padding-left:20px;list-style:disc}
-  li{margin:6px 0;position:relative;padding-left:4px}
-  .ing-row{display:flex;justify-content:space-between;gap:10px}
-  .amt{font-variant-numeric:tabular-nums;color:#111827}
-  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
-  th{background:#e8faf0}
-  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
-  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
-  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
-  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
-  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
-  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
-  ol{margin:0;padding-left:18px}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
+<!-- ===== Recetas 1–9 (conservando tus páginas y gráficos) ===== -->
 
 <!-- Receta 1 -->
 <section class="page">
@@ -269,66 +223,7 @@
   <div class="foot">Pág. 3 — Tostada de Palta y Huevo</div>
 </section>
 
-<script>
-  const datasets = [
-    {id:'pie12',data:[34,10,8]},
-    {id:'pie13',data:[10,28,15]},
-    {id:'pie14',data:[18,9,12]}
-  ];
-  document.addEventListener('DOMContentLoaded',()=>{
-    datasets.forEach(r=>{
-      const el=document.getElementById(r.id);
-      if(!el) return;
-      new Chart(el.getContext('2d'),{
-        type:'pie',
-        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
-        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
-      });
-    });
-  });
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Guía Nutricional — Recetas</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
-  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
-  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
-  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
-  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
-  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
-  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
-  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
-  ul{margin:0;padding-left:20px;list-style:disc}
-  li{margin:6px 0;position:relative;padding-left:4px}
-  .ing-row{display:flex;justify-content:space-between;gap:10px}
-  .amt{font-variant-numeric:tabular-nums;color:#111827}
-  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
-  th{background:#e8faf0}
-  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
-  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
-  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
-  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
-  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
-  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
-  ol{margin:0;padding-left:18px}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-
-<!-- Receta 1 -->
+<!-- Receta 4 -->
 <section class="page">
   <header class="pagehead">
     <h1 class="title">🍪 Galletas de Avena y Plátano</h1>
@@ -362,7 +257,7 @@
   <div class="foot">Pág. 4 — Galletas de Avena y Plátano</div>
 </section>
 
-<!-- Receta 2 -->
+<!-- Receta 5 -->
 <section class="page">
   <header class="pagehead">
     <h1 class="title">🥞 Bowl de Panqueques estilo Cheesecake</h1>
@@ -399,7 +294,7 @@
   <div class="foot">Pág. 5 — Bowl de Panqueques estilo Cheesecake</div>
 </section>
 
-<!-- Receta 3 -->
+<!-- Receta 6 -->
 <section class="page">
   <header class="pagehead">
     <h1 class="title">🥞 Panqueques Esponjosos de Proteína</h1>
@@ -434,67 +329,6 @@
   </div>
   <div class="foot">Pág. 6 — Panqueques Esponjosos de Proteína</div>
 </section>
-
-<script>
-  const datasets = [
-    {id:'pie15',data:[18,4,5]},
-    {id:'pie16',data:[32,16,9]},
-    {id:'pie17',data:[28,15,8]}
-  ];
-  document.addEventListener('DOMContentLoaded',()=>{
-    datasets.forEach(r=>{
-      const el=document.getElementById(r.id);
-      if(!el) return;
-      new Chart(el.getContext('2d'),{
-        type:'pie',
-        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
-        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
-      });
-    });
-  });
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Guía Nutricional — Recetas</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
-  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
-  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
-  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
-  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
-  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
-  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
-  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
-  ul{margin:0;padding-left:20px;list-style:disc}
-  li{margin:6px 0;position:relative;padding-left:4px}
-  .ing-row{display:flex;justify-content:space-between;gap:10px}
-  .amt{font-variant-numeric:tabular-nums;color:#111827}
-  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
-  th{background:#e8faf0}
-  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
-  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
-  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
-  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
-  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
-  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
-  ol{margin:0;padding-left:18px}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-
-<!-- Aquí irán las recetas previas (1 a 6) -->
 
 <!-- Receta 7 -->
 <section class="page">
@@ -626,11 +460,78 @@
   <div class="foot">Pág. 9 — Huevos Revueltos con Queso Feta</div>
 </section>
 
+<!-- Receta 10 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥙 Stuffed Chicken Sausage Pitas</h1>
+    <div class="badges">
+      <span class="badge">Alto en proteína</span>
+      <span class="badge">Práctico</span>
+      <span class="badge">&lt; 20 min</span>
+    </div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Pan pita integral</span><span class="amt">2 unidades</span></li>
+          <li class="ing-row"><span>• Carne de salchicha de pollo sazonada</span><span class="amt">120 g</span></li>
+          <li class="ing-row"><span>• Tomate en cubos</span><span class="amt">1 mediano</span></li>
+          <li class="ing-row"><span>• Espinaca fresca</span><span class="amt">1 puñado</span></li>
+          <li class="ing-row"><span>• Cebolla china picada</span><span class="amt">1 tallo</span></li>
+          <li class="ing-row"><span>• Palta</span><span class="amt">1/4 unidad</span></li>
+          <li class="ing-row"><span>• Limón</span><span class="amt">1/2 unidad</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel">
+        <ul>
+          <li><strong>Vegano:</strong> reemplazar pollo por lentejas guisadas o garbanzos.</li>
+          <li><strong>Sin gluten:</strong> usar pan pita sin gluten.</li>
+        </ul>
+      </div>
+      <div class="adaptaciones-locales">
+        <div class="titulo-local">Adaptaciones Locales</div>
+        <p>Si no encuentras pan pita fácilmente en Arequipa, puedes usar pan integral de molde del mercado local.</p>
+      </div>
+      <div class="image-slot">Foto del plato — stuffed pitas</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel">
+        <ol>
+          <li>Mezclar la carne de salchicha de pollo con tomate, espinaca y cebolla china.</li>
+          <li>Rellenar los panes pita con la mezcla.</li>
+          <li>Dorar en sartén o parrilla 3–4 minutos por lado hasta que esté cocido.</li>
+          <li>Acompañar con palta triturada con limón.</li>
+        </ol>
+      </div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Ideal para llevar en la lonchera; aporta proteínas de calidad.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table>
+        <tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr>
+        <tr><td>380 kcal</td><td>32 g</td><td>22 g</td><td>15 g</td><td>5 g</td></tr>
+      </table>
+      <div class="chartwrap"><canvas id="pie11" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 10 — Stuffed Chicken Sausage Pitas</div>
+</section>
+
 <script>
   const datasets = [
-    {id:'pie7',data:[28,20,16]},
-    {id:'pie8',data:[18,20,18]},
-    {id:'pie9',data:[8,24,20]}
+    {id:'pie12',data:[34,10,8]},
+    {id:'pie13',data:[10,28,15]},
+    {id:'pie14',data:[18,9,12]},
+    {id:'pie15',data:[18,4,5]},
+    {id:'pie16',data:[32,16,9]},
+    {id:'pie17',data:[28,15,8]},
+    {id:'pie7', data:[28,20,16]},
+    {id:'pie8', data:[18,20,18]},
+    {id:'pie9', data:[8,24,20]},
+    {id:'pie11',data:[32,22,15]}
   ];
   document.addEventListener('DOMContentLoaded',()=>{
     datasets.forEach(r=>{
