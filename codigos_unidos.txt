@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía Nutricional — Desayunos (10)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
+  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
+  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
+  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
+  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+  ul{margin:0;padding-left:20px;list-style:disc}
+  li{margin:6px 0;position:relative;padding-left:4px}
+  .ing-row{display:flex;justify-content:space-between;gap:10px}
+  .amt{font-variant-numeric:tabular-nums;color:#111827}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
+  th{background:#e8faf0}
+  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
+  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
+  .reemplazos{border-left:6px solid var(--pink);background:#fdf2f8;padding:10px;border-radius:10px;margin-top:12px}
+  .reemplazos .titulo-reemplazo{color:var(--fucsia);font-weight:800}
+  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
+  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
+  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
+  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
+  ol{margin:0;padding-left:18px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1 style="text-align:center;font-size:40px;margin:20px 0;color:var(--accent);font-family:Rubik, sans-serif;">☀️ Desayunos</h1>
+
+<!-- Aquí empezarán las 10 recetas nuevas que me diste -->
+<!-- Ejemplo estructura con "Adaptaciones Locales" si aplica -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥙 Stuffed Chicken Sausage Pitas</h1>
+    <div class="badges">
+      <span class="badge">Alto en proteína</span>
+      <span class="badge">Práctico</span>
+      <span class="badge">&lt; 20 min</span>
+    </div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Pan pita integral</span><span class="amt">2 unidades</span></li>
+          <li class="ing-row"><span>• Carne de salchicha de pollo sazonada</span><span class="amt">120 g</span></li>
+          <li class="ing-row"><span>• Tomate en cubos</span><span class="amt">1 mediano</span></li>
+          <li class="ing-row"><span>• Espinaca fresca</span><span class="amt">1 puñado</span></li>
+          <li class="ing-row"><span>• Cebolla china picada</span><span class="amt">1 tallo</span></li>
+          <li class="ing-row"><span>• Palta</span><span class="amt">1/4 unidad</span></li>
+          <li class="ing-row"><span>• Limón</span><span class="amt">1/2 unidad</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel">
+        <ul>
+          <li><strong>Vegano:</strong> reemplazar pollo por lentejas guisadas o garbanzos.</li>
+          <li><strong>Sin gluten:</strong> usar pan pita sin gluten.</li>
+        </ul>
+      </div>
+      <div class="adaptaciones-locales">
+        <div class="titulo-local">Adaptaciones Locales</div>
+        <p>Si no encuentras pan pita fácilmente en Arequipa, puedes usar pan integral de molde del mercado local.</p>
+      </div>
+      <div class="image-slot">Foto del plato — stuffed pitas</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel">
+        <ol>
+          <li>Mezclar la carne de salchicha de pollo con tomate, espinaca y cebolla china.</li>
+          <li>Rellenar los panes pita con la mezcla.</li>
+          <li>Dorar en sartén o parrilla 3–4 minutos por lado hasta que esté cocido.</li>
+          <li>Acompañar con palta triturada con limón.</li>
+        </ol>
+      </div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Ideal para llevar en la lonchera; aporta proteínas de calidad.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table>
+        <tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr>
+        <tr><td>380 kcal</td><td>32 g</td><td>22 g</td><td>15 g</td><td>5 g</td></tr>
+      </table>
+      <div class="chartwrap"><canvas id="pie11" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 1 — Stuffed Chicken Sausage Pitas</div>
+</section>
+
+<!-- Aquí seguirán las otras 9 recetas que me indicaste con el mismo formato -->
+
+<script>
+  const datasets = [
+    {id:'pie11',data:[32,22,15]}
+  ];
+  document.addEventListener('DOMContentLoaded',()=>{
+    datasets.forEach(r=>{
+      const el=document.getElementById(r.id);
+      if(!el) return;
+      new Chart(el.getContext('2d'),{
+        type:'pie',
+        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
+        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía Nutricional — Recetas</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
+  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
+  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
+  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
+  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+  ul{margin:0;padding-left:20px;list-style:disc}
+  li{margin:6px 0;position:relative;padding-left:4px}
+  .ing-row{display:flex;justify-content:space-between;gap:10px}
+  .amt{font-variant-numeric:tabular-nums;color:#111827}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
+  th{background:#e8faf0}
+  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
+  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
+  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
+  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
+  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
+  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
+  ol{margin:0;padding-left:18px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Receta 1 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🍓 Parfait de Chía y Frambuesa</h1>
+    <div class="badges"><span class="badge">Alto en fibra</span><span class="badge">Fuente de omega 3</span><span class="badge">&lt; 10 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Frambuesas frescas</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Leche de tu elección</span><span class="amt">3/4 taza</span></li>
+          <li class="ing-row"><span>• Miel</span><span class="amt">2 cdas</span></li>
+          <li class="ing-row"><span>• Extracto de vainilla</span><span class="amt">1 cdta</span></li>
+          <li class="ing-row"><span>• Semillas de chía</span><span class="amt">4 cdas</span></li>
+          <li class="ing-row"><span>• Yogur griego descremado</span><span class="amt">1 1/2 tazas</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul><li><strong>Vegano:</strong> usar leche y yogur vegetal.</li><li><strong>Sin lactosa:</strong> yogur y leche deslactosada.</li></ul></div>
+      <div class="adaptaciones-locales"><div class="titulo-local">Adaptaciones Locales</div><p>Si no encuentras frambuesas, puedes reemplazarlas por fresas frescas.</p></div>
+      <div class="image-slot">Foto del plato — parfait de chía</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol><li>Licuar frambuesas, leche, miel y vainilla.</li><li>Verter la mezcla en un recipiente y añadir semillas de chía.</li><li>Refrigerar por 2 horas.</li><li>Servir alternando capas con yogur griego y más frambuesas.</li></ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>La chía ayuda a la digestión y aporta omega 3 para el cerebro.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>250 kcal</td><td>34 g</td><td>10 g</td><td>8 g</td><td>9 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie12" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 1 — Parfait de Chía y Frambuesa</div>
+</section>
+
+<!-- Receta 2 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🍤 Salteado de Camarones y Champiñones</h1>
+    <div class="badges"><span class="badge">Alto en proteína</span><span class="badge">Rápido</span><span class="badge">&lt; 15 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Camarones limpios</span><span class="amt">200 g</span></li>
+          <li class="ing-row"><span>• Champiñones frescos</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Huevos</span><span class="amt">2 unidades</span></li>
+          <li class="ing-row"><span>• Leche</span><span class="amt">2 cdas</span></li>
+          <li class="ing-row"><span>• Salsa de soya ligera</span><span class="amt">1 cda</span></li>
+          <li class="ing-row"><span>• Aceite vegetal</span><span class="amt">1 cda</span></li>
+          <li class="ing-row"><span>• Sal y pimienta</span><span class="amt">al gusto</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul><li><strong>Sin mariscos:</strong> sustituir camarones por pollo en cubos.</li><li><strong>Vegano:</strong> sustituir huevos por tofu revuelto.</li></ul></div>
+      <div class="image-slot">Foto del plato — salteado de camarones</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol><li>Salpimentar los camarones.</li><li>Saltear en sartén con aceite 2–3 minutos.</li><li>Añadir champiñones y cocinar 3 minutos más.</li><li>Agregar huevo batido con leche y revolver suavemente.</li><li>Sazonar con salsa de soya y servir caliente.</li></ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Combínalo con arroz integral para un desayuno más completo.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>300 kcal</td><td>10 g</td><td>28 g</td><td>15 g</td><td>2 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie13" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 2 — Salteado de Camarones y Champiñones</div>
+</section>
+
+<!-- Receta 3 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥑 Tostada de Palta y Huevo</h1>
+    <div class="badges"><span class="badge">Fuente de fibra</span><span class="badge">Grasas saludables</span><span class="badge">&lt; 10 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (1 porción)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Pan integral</span><span class="amt">1 rebanada</span></li>
+          <li class="ing-row"><span>• Palta madura</span><span class="amt">1/2 unidad</span></li>
+          <li class="ing-row"><span>• Huevo sancochado</span><span class="amt">1 unidad</span></li>
+          <li class="ing-row"><span>• Limón</span><span class="amt">unas gotas</span></li>
+          <li class="ing-row"><span>• Sal y pimienta</span><span class="amt">al gusto</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul><li><strong>Vegano:</strong> sustituir huevo por tofu revuelto o garbanzos triturados.</li><li><strong>Sin gluten:</strong> usar pan sin gluten.</li></ul></div>
+      <div class="image-slot">Foto del plato — tostada de palta</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol><li>Tostar el pan integral.</li><li>Triturar la palta con limón, sal y pimienta.</li><li>Colocar la mezcla sobre el pan.</li><li>Añadir rodajas de huevo sancochado encima y servir.</li></ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>La palta aporta grasas saludables esenciales para el cerebro.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>220 kcal</td><td>18 g</td><td>9 g</td><td>12 g</td><td>5 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie14" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 3 — Tostada de Palta y Huevo</div>
+</section>
+
+<script>
+  const datasets = [
+    {id:'pie12',data:[34,10,8]},
+    {id:'pie13',data:[10,28,15]},
+    {id:'pie14',data:[18,9,12]}
+  ];
+  document.addEventListener('DOMContentLoaded',()=>{
+    datasets.forEach(r=>{
+      const el=document.getElementById(r.id);
+      if(!el) return;
+      new Chart(el.getContext('2d'),{
+        type:'pie',
+        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
+        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía Nutricional — Recetas</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
+  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
+  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
+  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
+  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+  ul{margin:0;padding-left:20px;list-style:disc}
+  li{margin:6px 0;position:relative;padding-left:4px}
+  .ing-row{display:flex;justify-content:space-between;gap:10px}
+  .amt{font-variant-numeric:tabular-nums;color:#111827}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
+  th{background:#e8faf0}
+  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
+  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
+  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
+  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
+  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
+  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
+  ol{margin:0;padding-left:18px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Receta 1 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🍪 Galletas de Avena y Plátano</h1>
+    <div class="badges"><span class="badge">Sin azúcar añadida</span><span class="badge">Fuente de energía</span><span class="badge">&lt; 20 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (6 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Plátano maduro</span><span class="amt">1 unidad</span></li>
+          <li class="ing-row"><span>• Avena en hojuelas</span><span class="amt">3/4 taza</span></li>
+          <li class="ing-row"><span>• Mantequilla de maní natural</span><span class="amt">1/4 taza</span></li>
+          <li class="ing-row"><span>• Chispas de chocolate</span><span class="amt">1/4 taza</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul><li><strong>Vegano:</strong> usar chocolate vegano.</li><li><strong>Sin gluten:</strong> utilizar avena certificada sin gluten.</li></ul></div>
+      <div class="image-slot">Foto del plato — galletas de avena</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol><li>Precalentar el horno a 180°C.</li><li>Triturar el plátano y mezclar con avena, mantequilla de maní y chocolate.</li><li>Formar bolitas y colocarlas en una bandeja con papel manteca.</li><li>Aplastar un poco y hornear 10 minutos.</li></ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Una opción práctica para el recreo, aporta energía duradera.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>120 kcal</td><td>18 g</td><td>4 g</td><td>5 g</td><td>3 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie15" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 4 — Galletas de Avena y Plátano</div>
+</section>
+
+<!-- Receta 2 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥞 Bowl de Panqueques estilo Cheesecake</h1>
+    <div class="badges"><span class="badge">Alto en proteína</span><span class="badge">Horneado</span><span class="badge">30 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Queso fresco batido</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Huevos</span><span class="amt">4 unidades</span></li>
+          <li class="ing-row"><span>• Miel</span><span class="amt">1 cda</span></li>
+          <li class="ing-row"><span>• Extracto de vainilla</span><span class="amt">2 cdtas</span></li>
+          <li class="ing-row"><span>• Avena molida</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Polvo de hornear</span><span class="amt">2 cdtas</span></li>
+          <li class="ing-row"><span>• Frutas frescas</span><span class="amt">al gusto</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul><li><strong>Sin gluten:</strong> usar avena sin gluten.</li><li><strong>Vegano:</strong> sustituir queso y huevo por alternativas vegetales.</li></ul></div>
+      <div class="image-slot">Foto del plato — bowl de panqueques</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol><li>Precalentar el horno a 180°C.</li><li>Licuar todos los ingredientes hasta obtener una mezcla homogénea.</li><li>Verter en moldes individuales y añadir frutas.</li><li>Hornear por 25 minutos.</li></ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Una opción saciante, perfecta para un desayuno de fin de semana.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>280 kcal</td><td>32 g</td><td>16 g</td><td>9 g</td><td>4 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie16" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 5 — Bowl de Panqueques estilo Cheesecake</div>
+</section>
+
+<!-- Receta 3 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥞 Panqueques Esponjosos de Proteína</h1>
+    <div class="badges"><span class="badge">Alto en proteína</span><span class="badge">Sin gluten</span><span class="badge">&lt; 20 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Huevos</span><span class="amt">2 unidades</span></li>
+          <li class="ing-row"><span>• Yogur griego natural</span><span class="amt">1/2 taza</span></li>
+          <li class="ing-row"><span>• Miel</span><span class="amt">1 cdta</span></li>
+          <li class="ing-row"><span>• Esencia de vainilla</span><span class="amt">1/2 cdta</span></li>
+          <li class="ing-row"><span>• Harina de avena</span><span class="amt">1/3 taza</span></li>
+          <li class="ing-row"><span>• Polvo de hornear</span><span class="amt">1 cdta</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul><li><strong>Sin lactosa:</strong> sustituir yogur por versión deslactosada o vegetal.</li></ul></div>
+      <div class="image-slot">Foto del plato — panqueques esponjosos</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol><li>Mezclar huevos, yogur, miel y vainilla.</li><li>Agregar harina de avena y polvo de hornear.</li><li>Cocinar en sartén antiadherente 2 minutos por lado.</li><li>Servir con frutas frescas encima.</li></ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Proporciona energía y proteínas ideales para después de hacer deporte.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>260 kcal</td><td>28 g</td><td>15 g</td><td>8 g</td><td>3 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie17" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 6 — Panqueques Esponjosos de Proteína</div>
+</section>
+
+<script>
+  const datasets = [
+    {id:'pie15',data:[18,4,5]},
+    {id:'pie16',data:[32,16,9]},
+    {id:'pie17',data:[28,15,8]}
+  ];
+  document.addEventListener('DOMContentLoaded',()=>{
+    datasets.forEach(r=>{
+      const el=document.getElementById(r.id);
+      if(!el) return;
+      new Chart(el.getContext('2d'),{
+        type:'pie',
+        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
+        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía Nutricional — Recetas</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0f172a;--muted:#64748b;--accent:#16a34a;--pink:#f472b6;--sky:#38bdf8;--warn:#f59e0b;--card:#ffffff;--bg:#f1f5f9;--line:#e2e8f0;--fucsia:#ff00ff; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif}
+  .page{width:794px;min-height:1123px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.08);display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .page-inner{padding:28px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+  header.pagehead{background:linear-gradient(90deg,var(--accent),#22c55e);color:white;padding:18px 24px}
+  .title{font-family:Rubik, Poppins, sans-serif;font-size:28px;font-weight:800;margin:0}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:999px}
+  h3{margin:10px 0 6px 0;font-weight:800;color:var(--ink)}
+  .panel{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+  ul{margin:0;padding-left:20px;list-style:disc}
+  li{margin:6px 0;position:relative;padding-left:4px}
+  .ing-row{display:flex;justify-content:space-between;gap:10px}
+  .amt{font-variant-numeric:tabular-nums;color:#111827}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left}
+  th{background:#e8faf0}
+  .image-slot{border:2px dashed var(--line);border-radius:14px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;background:linear-gradient(180deg,#fafafa,#ffffff)}
+  .tips{border-left:6px solid var(--warn);background:#fff7ed;padding:10px 12px;border-radius:10px}
+  .adaptaciones-locales{border-left:6px solid var(--fucsia);background:#fff0fb;padding:10px;border-radius:10px;margin-top:12px}
+  .adaptaciones-locales .titulo-local{color:var(--fucsia);font-weight:800}
+  .foot{position:absolute;bottom:10px;right:16px;font-size:12px;color:var(--muted)}
+  .chartwrap{border:1px solid var(--line);border-radius:14px;padding:10px}
+  ol{margin:0;padding-left:18px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Aquí irán las recetas previas (1 a 6) -->
+
+<!-- Receta 7 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🌯 Tortilla de Omelette</h1>
+    <div class="badges"><span class="badge">Rápido</span><span class="badge">Práctico</span><span class="badge">Fuente de proteína</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Tortilla integral o de maíz</span><span class="amt">2 unidades</span></li>
+          <li class="ing-row"><span>• Huevos</span><span class="amt">3 unidades</span></li>
+          <li class="ing-row"><span>• Tomate en rebanadas</span><span class="amt">1 mediano</span></li>
+          <li class="ing-row"><span>• Queso fresco rallado</span><span class="amt">40 g</span></li>
+          <li class="ing-row"><span>• Palta</span><span class="amt">1/2 unidad</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul>
+        <li><strong>Vegano:</strong> reemplazar huevos por tofu revuelto y queso por vegano.</li>
+        <li><strong>Sin gluten:</strong> usar tortilla de maíz certificada sin gluten.</li>
+      </ul></div>
+      <div class="image-slot">Foto del plato — tortilla omelette</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol>
+        <li>Batir los huevos con sal y pimienta.</li>
+        <li>En sartén con aceite, cocinar el tomate 1–2 minutos.</li>
+        <li>Verter los huevos y colocar la tortilla encima, cocinar 2–3 minutos.</li>
+        <li>Añadir queso y palta, doblar y dorar por ambos lados.</li>
+      </ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Acompáñalo con una fruta para un desayuno completo.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>360 kcal</td><td>28 g</td><td>20 g</td><td>16 g</td><td>4 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie7" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 7 — Tortilla de Omelette</div>
+</section>
+
+<!-- Receta 8 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🥗 Bowl Mediterráneo</h1>
+    <div class="badges"><span class="badge">Equilibrado</span><span class="badge">Rico en verduras</span><span class="badge">&lt; 20 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Huevos</span><span class="amt">2 unidades</span></li>
+          <li class="ing-row"><span>• Aceite de oliva</span><span class="amt">1 cda</span></li>
+          <li class="ing-row"><span>• Espinaca baby</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Champiñones</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Tomates cherry</span><span class="amt">1 taza</span></li>
+          <li class="ing-row"><span>• Hummus</span><span class="amt">1/4 taza</span></li>
+          <li class="ing-row"><span>• Aceitunas (opcional)</span><span class="amt">1/4 taza</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul>
+        <li><strong>Vegano:</strong> omitir huevos y añadir garbanzos o más hummus.</li>
+      </ul></div>
+      <div class="adaptaciones-locales"><div class="titulo-local">Adaptaciones Locales</div><p>Si no encuentras aceitunas tipo kalamata, sustituye por aceitunas negras comunes.</p></div>
+      <div class="image-slot">Foto del plato — bowl mediterráneo</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol>
+        <li>Hervir huevos 7 minutos, enfriar y pelar.</li>
+        <li>Saltear champiñones 5 minutos, añadir espinaca y tomates hasta marchitar.</li>
+        <li>Armar el bowl con hummus, vegetales, huevos y aceitunas.</li>
+      </ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Un desayuno balanceado con proteína, grasas saludables y fibra.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>340 kcal</td><td>18 g</td><td>20 g</td><td>18 g</td><td>5 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie8" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 8 — Bowl Mediterráneo</div>
+</section>
+
+<!-- Receta 9 -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">🧀 Huevos Revueltos con Queso Feta</h1>
+    <div class="badges"><span class="badge">Fuente de proteína</span><span class="badge">Rápido</span><span class="badge">&lt; 15 min</span></div>
+  </header>
+  <div class="page-inner">
+    <div class="left">
+      <h3>Ingredientes (2 porciones)</h3>
+      <div class="panel">
+        <ul>
+          <li class="ing-row"><span>• Huevos grandes</span><span class="amt">4 unidades</span></li>
+          <li class="ing-row"><span>• Queso feta desmenuzado</span><span class="amt">1/4 taza</span></li>
+          <li class="ing-row"><span>• Tomates cherry</span><span class="amt">12 unidades</span></li>
+          <li class="ing-row"><span>• Espinaca baby</span><span class="amt">1/2 taza</span></li>
+          <li class="ing-row"><span>• Ajo en polvo</span><span class="amt">1/4 cdta</span></li>
+        </ul>
+      </div>
+      <h3>Adaptaciones</h3>
+      <div class="panel"><ul>
+        <li><strong>Sin lactosa:</strong> sustituir feta por queso fresco.</li>
+        <li><strong>Vegano:</strong> usar tofu firme y levadura nutricional.</li>
+      </ul></div>
+      <div class="adaptaciones-locales"><div class="titulo-local">Adaptaciones Locales</div><p>Si no encuentras queso feta, reemplaza por queso fresco desmenuzado.</p></div>
+      <div class="image-slot">Foto del plato — huevos con feta</div>
+    </div>
+    <div class="right">
+      <h3>Procedimiento</h3>
+      <div class="panel"><ol>
+        <li>Batir los huevos con ajo, sal y pimienta.</li>
+        <li>Saltear tomates y espinaca; verter huevos y revolver hasta casi cuajar.</li>
+        <li>Añadir feta, mezclar y retirar del fuego.</li>
+      </ol></div>
+      <h3>Tips</h3>
+      <div class="tips"><ul><li>Un desayuno rápido y saciante, perfecto para días con poco tiempo.</li></ul></div>
+      <h3>Tabla nutricional</h3>
+      <table><tr><th>Energía</th><th>Carbohidratos</th><th>Proteína</th><th>Grasa</th><th>Fibra</th></tr><tr><td>330 kcal</td><td>8 g</td><td>24 g</td><td>20 g</td><td>2 g</td></tr></table>
+      <div class="chartwrap"><canvas id="pie9" width="320" height="320"></canvas></div>
+    </div>
+  </div>
+  <div class="foot">Pág. 9 — Huevos Revueltos con Queso Feta</div>
+</section>
+
+<script>
+  const datasets = [
+    {id:'pie7',data:[28,20,16]},
+    {id:'pie8',data:[18,20,18]},
+    {id:'pie9',data:[8,24,20]}
+  ];
+  document.addEventListener('DOMContentLoaded',()=>{
+    datasets.forEach(r=>{
+      const el=document.getElementById(r.id);
+      if(!el) return;
+      new Chart(el.getContext('2d'),{
+        type:'pie',
+        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']}]},
+        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
