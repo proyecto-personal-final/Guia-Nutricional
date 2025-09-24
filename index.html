@@ -201,7 +201,7 @@
 </section>
 <!-- ====== Fin Introducción ====== -->
   
-  <!-- ===== PÁGINA INFORMATIVA 1 ===== -->
+<!-- ===== PÁGINA INFORMATIVA — NUTRIENTES CLAVE ===== -->
 <section class="page">
   <header class="pagehead">
     <h1 class="title">🥦 Nutrientes clave en la adolescencia</h1>
@@ -214,28 +214,106 @@
     </div>
   </header>
 
-  <div class="page-inner" style="display:block;padding-top:24px">
-
-    <!-- POR QUÉ IMPORTAN -->
-    <div class="panel" style="display:grid;grid-template-columns:1fr 1.2fr;gap:16px;align-items:start;margin-bottom:18px">
-      <h3 style="margin:0">¿Por qué son importantes?</h3>
-      <div>
+  <!-- Usa tu grid 1.1fr / 1fr -->
+  <div class="page-inner">
+    <!-- IZQUIERDA: texto + tabla + micronutrientes -->
+    <div class="left">
+      <h3 style="margin-top:0">¿Por qué son importantes?</h3>
+      <div class="panel">
         <p style="margin:0">
-          Durante la adolescencia el cuerpo crece rápido: aumenta la masa muscular, se fortalecen los huesos y se adapta el metabolismo.
-          Una alimentación equilibrada asegura <strong>energía</strong> para el estudio y el deporte, <strong>crecimiento</strong> adecuado
-          y <strong>bienestar</strong> físico y mental.
+          En la adolescencia crecen músculos y huesos y cambia el metabolismo. Comer equilibrado da
+          <strong>energía</strong> para estudiar y entrenar, favorece el <strong>crecimiento</strong> y el
+          <strong>bienestar</strong> físico y mental.
         </p>
+      </div>
+
+      <h3>Macronutrientes</h3>
+      <div class="panel" style="overflow:auto;border-radius:12px">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.45;border:1px solid var(--line)">
+          <thead>
+            <tr>
+              <th style="background:#e8faf0;padding:10px 12px;text-align:left">Nutriente</th>
+              <th style="background:#e8faf0;padding:10px 12px;text-align:left">Función principal</th>
+              <th style="background:#e8faf0;padding:10px 12px;text-align:left">Ejemplos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px 12px"><strong>Proteínas</strong></td>
+              <td style="padding:10px 12px">Construyen y reparan tejidos; clave tras el ejercicio.</td>
+              <td style="padding:10px 12px">Pescado, pollo, huevos, legumbres, lácteos.</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px"><strong>Carbohidratos</strong></td>
+              <td style="padding:10px 12px">Energía principal para cerebro y actividad.</td>
+              <td style="padding:10px 12px">Arroz integral, avena, pan integral, papa/camote, frutas.</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px"><strong>Grasas saludables</strong></td>
+              <td style="padding:10px 12px">Desarrollo cerebral, hormonas y absorción de vitaminas.</td>
+              <td style="padding:10px 12px">Palta, aceite de oliva, frutos secos, semillas, pescado azul.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Micronutrientes esenciales</h3>
+      <div class="panel">
+        <ul style="margin:0">
+          <li><strong>Calcio</strong>: huesos y dientes — lácteos, almendras, brócoli.</li>
+          <li><strong>Hierro</strong>: previene anemia — carnes magras, lentejas, espinaca.</li>
+          <li><strong>Vitamina D</strong>: fija el calcio — pescado, huevo, sol moderado.</li>
+          <li><strong>Vitaminas A y C</strong>: piel e inmunidad — zanahoria, mango, cítricos, pimientos.</li>
+          <li><strong>Zinc / Magnesio</strong>: crecimiento, recuperación y sueño — carnes, semillas, legumbres, granos integrales.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- MACRONUTRIENTES -->
-    <div class="panel" style="margin-bottom:18px">
-      <h3 style="margin-top:0">Macronutrientes</h3>
-      <div style="overflow:auto;border:1px solid var(--line);border-radius:12px">
-        <table style="width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.45">
-          <thead>
-            <tr>
-              <th style="background:#e8faf0;padding:10px
+    <!-- DERECHA: distribución + gráfico + tips -->
+    <div class="right">
+      <h3 style="margin-top:0">Distribución recomendada</h3>
+      <div class="panel">
+        <ul style="margin:0;padding-left:18px">
+          <li><strong>50–55%</strong> carbohidratos</li>
+          <li><strong>25–30%</strong> grasas saludables</li>
+          <li><strong>15–20%</strong> proteínas</li>
+        </ul>
+        <div class="chartwrap" style="margin-top:12px">
+          <canvas id="nutrientesPie" width="320" height="320"></canvas>
+        </div>
+      </div>
+
+      <h3>Tips rápidos</h3>
+      <div class="tips">
+        <ul style="margin:0">
+          <li>Llena tu plato de <strong>colores</strong> (más colores = más micronutrientes).</li>
+          <li>Prefiere <strong>integrales</strong> para energía sostenida y mejor digestión.</li>
+          <li>Incluye <strong>proteína</strong> en cada comida para apoyar el crecimiento.</li>
+          <li><strong>Agua</strong> primero: ayuda a concentración y rendimiento.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">Página Informativa — Nutrientes clave</div>
+</section>
+<!-- ===== FIN PÁGINA INFORMATIVA ===== -->
+
+<script>
+  // Requiere Chart.js ya cargado en tu página.
+  (function () {
+    var el = document.getElementById('nutrientesPie');
+    if (!el || typeof Chart === 'undefined') return;
+    new Chart(el.getContext('2d'), {
+      type: 'pie',
+      data: {
+        labels: ['Carbohidratos', 'Proteína', 'Grasa'],
+        datasets: [{ data: [55, 20, 25], backgroundColor: ['#38bdf8','#16a34a','#f59e0b'] }]
+      },
+      options: { responsive: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 12 } } } }
+    });
+  })();
+</script>
 
 <h1 style="text-align:center;font-size:40px;margin:20px 0;color:var(--accent);font-family:Rubik, sans-serif;">☀️ Desayunos</h1>
 
