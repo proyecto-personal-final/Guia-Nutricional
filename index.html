@@ -93,7 +93,7 @@
     <div class="portada-grid">
       <div class="portada-card">
         <div class="portada-figtitle">Figura 1</div>
-        <div class="portada-imgbg" style="background-image:url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="portada-imgbg" style="background-image:url('https://www.alinur.es/wp-content/uploads/2021/05/fruta.varidad.jpeg');"></div>
         <div class="portada-figcap">Frutas y verduras frescas, fuente esencial de vitaminas y minerales.</div>
       </div>
       <div class="portada-card">
@@ -705,6 +705,91 @@
       out.style.color = score===3 ? '#16a34a' : '#0f172a';
       out.textContent = 'Resultado: ' + score + '/3 ' + (score===3 ? '¡Perfecto! ✅' : 'Sigue practicando 💪');
     });
+  })();
+</script>
+
+  <!-- ===== PÁGINA INFORMATIVA — TESTIMONIOS BREVES ===== -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">💬 Testimonios breves</h1>
+    <div class="badges">
+      <span class="badge">Historias reales</span>
+      <span class="badge">Motivación</span>
+      <span class="badge">Hábitos</span>
+    </div>
+  </header>
+
+  <div class="page-inner" style="display:block">
+    <!-- Carrusel -->
+    <div class="panel" style="position:relative;overflow:hidden">
+      <div id="info5-track" style="display:flex;transition:transform .35s ease">
+        <!-- Slide 1 -->
+        <figure style="min-width:100%;margin:0;padding:0 6px 0 0">
+          <blockquote style="margin:0;padding:14px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+            “Empecé cambiando el pan blanco por integral y agregando fruta al desayuno. Tengo más energía en clases y ya no me da sueño a media mañana.”
+          </blockquote>
+          <figcaption style="margin-top:8px;font-weight:700">— Sofía, 15</figcaption>
+        </figure>
+        <!-- Slide 2 -->
+        <figure style="min-width:100%;margin:0;padding:0 6px 0 0">
+          <blockquote style="margin:0;padding:14px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+            “Antes casi no tomaba agua. Con la botella a la vista llego a 6–8 vasos y rindo mejor en fútbol.”
+          </blockquote>
+          <figcaption style="margin-top:8px;font-weight:700">— Diego, 16</figcaption>
+        </figure>
+        <!-- Slide 3 -->
+        <figure style="min-width:100%;margin:0;padding:0 6px 0 0">
+          <blockquote style="margin:0;padding:14px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+            “De adolescente aprendí a cocinar legumbres. Hoy, de adulto, mantengo el hábito y mis chequeos salen mejor.”
+          </blockquote>
+          <figcaption style="margin-top:8px;font-weight:700">— Carla, 28</figcaption>
+        </figure>
+      </div>
+
+      <!-- Controles -->
+      <button id="info5-prev" type="button" aria-label="Anterior"
+        style="position:absolute;left:8px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:10px;cursor:pointer">◀</button>
+      <button id="info5-next" type="button" aria-label="Siguiente"
+        style="position:absolute;right:8px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:10px;cursor:pointer">▶</button>
+
+      <!-- Indicadores -->
+      <div style="display:flex;gap:6px;justify-content:center;margin-top:10px">
+        <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
+        <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
+        <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
+      </div>
+    </div>
+
+    <!-- Tip motivacional -->
+    <div class="tips" style="margin-top:12px">
+      <ul style="margin:0">
+        <li>Empieza pequeño: cambia una cosa por semana (p. ej. agua en vez de gaseosa, fruta diaria, pan integral).</li>
+        <li>Tu “yo” del futuro te lo agradecerá: los hábitos de hoy impactan tu salud adulta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">Página Informativa — Testimonios</div>
+</section>
+<!-- ===== FIN PÁGINA INFORMATIVA ===== -->
+
+<script>
+  // Carrusel sencillo (prefijo info5-)
+  (function(){
+    var track = document.getElementById('info5-track');
+    var prev = document.getElementById('info5-prev');
+    var next = document.getElementById('info5-next');
+    var dots = document.querySelectorAll('.info5-dot');
+    if(!track || !prev || !next) return;
+    var index = 0, total = track.children.length;
+
+    function update(){
+      track.style.transform = 'translateX(' + (-100*index) + '%)';
+      dots.forEach(function(d,i){ d.style.background = i===index ? '#16a34a' : '#e2e8f0'; });
+    }
+    prev.addEventListener('click', function(){ index = (index-1+total)%total; update(); });
+    next.addEventListener('click', function(){ index = (index+1)%total; update(); });
+    update();
   })();
 </script>
 
