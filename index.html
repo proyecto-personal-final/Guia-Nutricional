@@ -1526,10 +1526,9 @@
     });
   });
 </script>
-  
-  <div class="page-inner" style="padding:24px 32px;display:block">
-   <h3 id="idx-snacks" style="margin-top:0">🍿 Snacks (10)</h3>
-   <ul>
+<!-- ===== INICIO DE SECCIÓN SNACKS ===== -->
+<h1 style="text-align:center;font-size:40px;margin:20px 0;color:var(--accent);font-family:Rubik, sans-serif;">🥟 Snacks</h1>
+
 <section class="page">
   <header class="pagehead">
     <h1 class="title">🧀 Palitos keto de ajo y queso</h1>
@@ -1557,7 +1556,7 @@
       </div>
       <div class="adaptaciones-locales">
         <div class="titulo-local">Adaptación Local</div>
-        <p>Si no encuentras <strong>harina de almendras</strong> puedes usar harina de maní o harina de coco mezclada con avena fina (mitad y mitad) para textura similar.</p>
+        <p>Si no encuentras <strong>harina de almendras</strong> puedes usar harina de maní o mezclar harina de avena fina con un poco de coco rallado para textura similar.</p>
       </div>
     </div>
 
@@ -1587,6 +1586,22 @@
 
   <div class="foot">Snacks — Palitos keto de ajo y queso</div>
 </section>
-   
+
+<script>
+  const datasetsSnack = [{ id:'pieSnack1', data:[3,9,11] }];
+  document.addEventListener('DOMContentLoaded',()=>{
+    datasetsSnack.forEach(r=>{
+      const el=document.getElementById(r.id);
+      if(!el) return;
+      new Chart(el.getContext('2d'),{
+        type:'pie',
+        data:{labels:['Carbohidratos','Proteína','Grasa'],datasets:[{data:r.data,backgroundColor:['#38bdf8','#16a34a','#f59e0b']} ]},
+        options:{responsive:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}
+      });
+    });
+  });
+</script>
+<!-- ===== FIN DE SNACK 1 ===== -->
+
 </body>
 </html>
