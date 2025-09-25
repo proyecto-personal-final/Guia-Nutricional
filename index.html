@@ -707,8 +707,7 @@
     });
   })();
 </script>
-
-  <!-- ===== PÁGINA INFORMATIVA — TESTIMONIOS BREVES ===== -->
+<!-- ===== PÁGINA INFORMATIVA — TESTIMONIOS BREVES (v2) ===== -->
 <section class="page">
   <header class="pagehead">
     <h1 class="title">💬 Testimonios breves</h1>
@@ -720,51 +719,98 @@
   </header>
 
   <div class="page-inner" style="display:block">
+
     <!-- Carrusel -->
-    <div class="panel" style="position:relative;overflow:hidden">
+    <div class="panel" style="position:relative;overflow:hidden;padding-bottom:34px">
       <div id="info5-track" style="display:flex;transition:transform .35s ease">
         <!-- Slide 1 -->
-        <figure style="min-width:100%;margin:0;padding:0 6px 0 0">
-          <blockquote style="margin:0;padding:14px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+        <figure style="min-width:100%;margin:0;padding:0 10px 0 0">
+          <blockquote style="margin:0;padding:16px 16px 16px 16px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
             “Empecé cambiando el pan blanco por integral y agregando fruta al desayuno. Tengo más energía en clases y ya no me da sueño a media mañana.”
           </blockquote>
-          <figcaption style="margin-top:8px;font-weight:700">— Sofía, 15</figcaption>
+          <figcaption style="margin-top:8px;font-weight:700">— Valentina, 13</figcaption>
         </figure>
         <!-- Slide 2 -->
-        <figure style="min-width:100%;margin:0;padding:0 6px 0 0">
-          <blockquote style="margin:0;padding:14px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
-            “Antes casi no tomaba agua. Con la botella a la vista llego a 6–8 vasos y rindo mejor en fútbol.”
+        <figure style="min-width:100%;margin:0;padding:0 10px 0 0">
+          <blockquote style="margin:0;padding:16px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+            “Antes casi no tomaba agua. Con una botella a la vista llego a 6–8 vasos y rindo mejor en fútbol.”
           </blockquote>
-          <figcaption style="margin-top:8px;font-weight:700">— Diego, 16</figcaption>
+          <figcaption style="margin-top:8px;font-weight:700">— Camila, 16</figcaption>
         </figure>
         <!-- Slide 3 -->
-        <figure style="min-width:100%;margin:0;padding:0 6px 0 0">
-          <blockquote style="margin:0;padding:14px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
-            “De adolescente aprendí a cocinar legumbres. Hoy, de adulto, mantengo el hábito y mis chequeos salen mejor.”
+        <figure style="min-width:100%;margin:0;padding:0 10px 0 0">
+          <blockquote style="margin:0;padding:16px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+            “Aprendí a cocinar legumbres cuando era adolescente. Hoy, con 20, sigo el hábito y me ayuda a ahorrar y comer mejor.”
           </blockquote>
-          <figcaption style="margin-top:8px;font-weight:700">— Carla, 28</figcaption>
+          <figcaption style="margin-top:8px;font-weight:700">— Diego, 20</figcaption>
+        </figure>
+        <!-- Slide 4 -->
+        <figure style="min-width:100%;margin:0;padding:0 10px 0 0">
+          <blockquote style="margin:0;padding:16px;border-left:6px solid var(--accent);background:#f8fafc;border-radius:10px">
+            “Me organizo el domingo: dejo avena y frutas listas. Así no salto el desayuno aunque tenga poco tiempo.”
+          </blockquote>
+          <figcaption style="margin-top:8px;font-weight:700">— Andrea, 15</figcaption>
         </figure>
       </div>
 
-      <!-- Controles -->
+      <!-- Controles (fuera del texto) -->
       <button id="info5-prev" type="button" aria-label="Anterior"
-        style="position:absolute;left:8px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:10px;cursor:pointer">◀</button>
+        style="position:absolute;left:-6px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:10px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.06)">◀</button>
       <button id="info5-next" type="button" aria-label="Siguiente"
-        style="position:absolute;right:8px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:10px;cursor:pointer">▶</button>
+        style="position:absolute;right:-6px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:10px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.06)">▶</button>
 
       <!-- Indicadores -->
-      <div style="display:flex;gap:6px;justify-content:center;margin-top:10px">
+      <div style="display:flex;gap:6px;justify-content:center;position:absolute;left:0;right:0;bottom:8px">
+        <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
         <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
         <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
         <span class="info5-dot" style="width:10px;height:10px;border-radius:999px;background:#e2e8f0"></span>
       </div>
     </div>
 
+    <!-- Claves que les funcionaron -->
+    <h3 style="margin-top:14px">Claves que les funcionaron</h3>
+    <div class="panel" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:#ffffff;border:1px solid var(--line);border-radius:10px;padding:10px">
+        <strong>Preparar porciones</strong> — dejar fruta lavada y granos cocidos reduce excusas.
+      </div>
+      <div style="background:#ffffff;border:1px solid var(--line);border-radius:10px;padding:10px">
+        <strong>Cambios simples</strong> — integral por blanco, agua por gaseosa, fruta diaria.
+      </div>
+      <div style="background:#ffffff;border:1px solid var(--line);border-radius:10px;padding:10px">
+        <strong>Rutina de sueño</strong> — dormir 8–10 h sube energía y humor.
+      </div>
+      <div style="background:#ffffff;border:1px solid var(--line);border-radius:10px;padding:10px">
+        <strong>Actividad favorita</strong> — moverse con algo que disfrutes mantiene el hábito.
+      </div>
+    </div>
+
+    <!-- Mini-entrevistas -->
+    <h3 style="margin-top:14px">Mini-entrevistas</h3>
+    <div class="panel" style="display:grid;gap:10px">
+      <details style="border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff">
+        <summary style="cursor:pointer;font-weight:800">Valentina, 13 — ¿Qué cambio te ayudó más?</summary>
+        <p style="margin-top:8px">Desayunar con avena + fruta. Me quita los antojos y rindo mejor en el cole.</p>
+      </details>
+      <details style="border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff">
+        <summary style="cursor:pointer;font-weight:800">Camila, 16 — ¿Cómo tomas más agua?</summary>
+        <p style="margin-top:8px">Llevo mi botella a todos lados y pongo recordatorios en el celular.</p>
+      </details>
+      <details style="border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff">
+        <summary style="cursor:pointer;font-weight:800">Diego, 20 — ¿Tu receta salvadora?</summary>
+        <p style="margin-top:8px">Guiso de lentejas con verduras. Barato, rico y lleno de proteína y fibra.</p>
+      </details>
+      <details style="border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff">
+        <summary style="cursor:pointer;font-weight:800">Andrea, 15 — ¿Qué haces cuando no hay tiempo?</summary>
+        <p style="margin-top:8px">Yogur griego con fruta y granola casera. En 2 minutos listo.</p>
+      </details>
+    </div>
+
     <!-- Tip motivacional -->
     <div class="tips" style="margin-top:12px">
       <ul style="margin:0">
-        <li>Empieza pequeño: cambia una cosa por semana (p. ej. agua en vez de gaseosa, fruta diaria, pan integral).</li>
-        <li>Tu “yo” del futuro te lo agradecerá: los hábitos de hoy impactan tu salud adulta.</li>
+        <li>Empieza pequeño: 1 cambio por semana y mantenlo.</li>
+        <li>Piensa en tu “yo del futuro”: estos hábitos suman para tu salud adulta.</li>
       </ul>
     </div>
   </div>
@@ -789,6 +835,21 @@
     }
     prev.addEventListener('click', function(){ index = (index-1+total)%total; update(); });
     next.addEventListener('click', function(){ index = (index+1)%total; update(); });
+
+    // Acceso por teclado
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowLeft'){ index = (index-1+total)%total; update(); }
+      if(e.key === 'ArrowRight'){ index = (index+1)%total; update(); }
+    });
+
+    // Auto-avance suave (pausa al pasar el mouse)
+    var timer;
+    function start(){ timer = setInterval(function(){ index=(index+1)%total; update(); }, 5000); }
+    function stop(){ clearInterval(timer); }
+    start();
+    track.parentElement.addEventListener('mouseenter', stop);
+    track.parentElement.addEventListener('mouseleave', start);
+
     update();
   })();
 </script>
