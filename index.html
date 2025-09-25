@@ -404,6 +404,208 @@
   <div class="foot">Página Informativa — Ingredientes saludables</div>
 </section>
 <!-- ===== FIN PÁGINA INFORMATIVA ===== -->
+  <!-- ===== PÁGINA INFORMATIVA — TIPS PARA ESTIMULAR EL CRECIMIENTO ===== -->
+<section class="page">
+  <header class="pagehead">
+    <h1 class="title">⚡️ Tips para estimular el crecimiento</h1>
+    <div class="badges">
+      <span class="badge">Sueño</span>
+      <span class="badge">Actividad física</span>
+      <span class="badge">Nutrición</span>
+      <span class="badge">Hidratación</span>
+      <span class="badge">Hábitos</span>
+    </div>
+  </header>
+
+  <div class="page-inner">
+    <!-- IZQUIERDA -->
+    <div class="left">
+      <!-- Sueño -->
+      <h3 style="margin-top:0">Sueño reparador</h3>
+      <div class="panel">
+        <div id="info3-sleepRow" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center">
+          <div>
+            <p style="margin:0 0 8px 0">La hormona de crecimiento se libera sobre todo durante el <strong>sueño profundo</strong>. Apunta a <strong>8–10 h</strong> por noche.</p>
+            <ul style="margin:0;padding-left:18px">
+              <li>Rutina fija: misma hora para dormir y despertar.</li>
+              <li>Desconexión digital 60 min antes de dormir.</li>
+              <li>Oscuridad y fresco en tu cuarto.</li>
+            </ul>
+          </div>
+          <div>
+            <label for="info3-sleep" style="font-weight:700;display:block;margin-bottom:6px">¿Cuántas horas dormiste ayer?</label>
+            <input id="info3-sleep" type="range" min="4" max="12" step="0.5" value="8" style="width:100%">
+            <div style="margin-top:6px;font-weight:700">Horas: <span id="info3-sleepVal">8</span> h</div>
+            <div id="info3-sleepMsg" style="margin-top:6px;color:#0f172a"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actividad física -->
+      <h3>Actividad física inteligente</h3>
+      <div class="panel">
+        <p style="margin-top:0">El movimiento estimula huesos y músculos. Objetivo semanal:</p>
+        <ul style="margin:0 0 10px 18px">
+          <li><strong>150–300 min</strong> de actividad moderada (bicicleta, bailar, caminar rápido), y</li>
+          <li><strong>2–3 días</strong> de fuerza (propio peso, bandas, pesas livianas).</li>
+        </ul>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div>
+            <label for="info3-min" style="font-weight:700;display:block;margin-bottom:6px">Minutos esta semana</label>
+            <input id="info3-min" type="number" min="0" step="10" value="150" style="width:100%;padding:6px;border:1px solid var(--line);border-radius:8px">
+          </div>
+          <div>
+            <label for="info3-strength" style="font-weight:700;display:block;margin-bottom:6px">Días de fuerza</label>
+            <input id="info3-strength" type="number" min="0" max="7" value="2" style="width:100%;padding:6px;border:1px solid var(--line);border-radius:8px">
+          </div>
+        </div>
+        <div id="info3-activityMsg" style="margin-top:8px;font-weight:700"></div>
+      </div>
+
+      <!-- Nutrición clave -->
+      <h3>Nutrición clave para crecer</h3>
+      <div class="panel" style="overflow:auto;border-radius:12px">
+        <table style="width:100%;border-collapse:collapse;border:1px solid var(--line);font-size:13.5px">
+          <thead>
+            <tr>
+              <th style="background:#e8faf0;text-align:left;padding:10px 12px">Nutriente</th>
+              <th style="background:#e8faf0;text-align:left;padding:10px 12px">¿Para qué sirve?</th>
+              <th style="background:#e8faf0;text-align:left;padding:10px 12px">Alimentos recomendados</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px 12px"><strong>Proteínas</strong></td>
+              <td style="padding:10px 12px">Forman músculo y tejidos; recuperación.</td>
+              <td style="padding:10px 12px">Huevos, pollo, pescado, legumbres, yogur griego.</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px"><strong>Calcio</strong></td>
+              <td style="padding:10px 12px">Huesos fuertes y crecimiento.</td>
+              <td style="padding:10px 12px">Lácteos, almendras, brócoli, bebidas vegetales fortificadas.</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px"><strong>Hierro</strong></td>
+              <td style="padding:10px 12px">Transporte de oxígeno; energía y foco.</td>
+              <td style="padding:10px 12px">Carnes magras, lentejas, espinaca + cítricos (mejoran absorción).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="right">
+      <!-- Hidratación -->
+      <h3 style="margin-top:0">Hidratación</h3>
+      <div class="panel">
+        <p style="margin:0 0 8px 0">La falta de agua reduce rendimiento físico y concentración. Meta orientativa: <strong>~35 ml/kg</strong> de peso corporal (guía general).</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end">
+          <div>
+            <label for="info3-weight" style="font-weight:700;display:block;margin-bottom:6px">Tu peso (kg)</label>
+            <input id="info3-weight" type="number" min="20" max="150" value="60" style="width:100%;padding:6px;border:1px solid var(--line);border-radius:8px">
+          </div>
+          <button id="info3-calc" type="button" style="padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#e8faf0;font-weight:800;cursor:pointer">Calcular meta</button>
+        </div>
+        <div id="info3-waterMsg" style="margin-top:8px;font-weight:700"></div>
+      </div>
+
+      <!-- Checklist de hábitos -->
+      <h3>Mini check de hábitos</h3>
+      <div class="panel">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+          <div style="flex:1;height:10px;background:#e2e8f0;border-radius:999px;overflow:hidden">
+            <div id="info3-progress" style="height:100%;width:0;background:#22c55e"></div>
+          </div>
+          <span id="info3-progressText" style="font-weight:800;min-width:48px;text-align:right">0%</span>
+        </div>
+        <ul style="margin:0;padding-left:18px;list-style:disc">
+          <li><label><input class="info3-check" type="checkbox"> Dormí 8–10 h</label></li>
+          <li><label><input class="info3-check" type="checkbox"> Hice 30 min de actividad</label></li>
+          <li><label><input class="info3-check" type="checkbox"> Comí fruta/verdura en 2+ comidas</label></li>
+          <li><label><input class="info3-check" type="checkbox"> Tomé agua en cada comida</label></li>
+        </ul>
+      </div>
+
+      <!-- Consejitos -->
+      <div class="tips">
+        <ul style="margin:0">
+          <li>Planifica tu <strong>hora de dormir</strong> igual que un entrenamiento.</li>
+          <li>Si te cuesta moverte, empieza con <strong>10–15 min</strong> y suma cada semana.</li>
+          <li>Incluye una <strong>proteína</strong> y una <strong>fruta/verdura</strong> en cada comida.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">Página Informativa — Tips de crecimiento</div>
+</section>
+<!-- ===== FIN PÁGINA INFORMATIVA ===== -->
+
+<script>
+  // Interacciones locales (aisladas por IDs con prefijo info3-)
+  (function () {
+    // Slider de sueño
+    var sleep = document.getElementById('info3-sleep');
+    var sleepVal = document.getElementById('info3-sleepVal');
+    var sleepMsg = document.getElementById('info3-sleepMsg');
+    if (sleep) {
+      var updateSleep = function(){
+        var v = parseFloat(sleep.value);
+        sleepVal.textContent = v;
+        if (v >= 8 && v <= 10) sleepMsg.textContent = '¡Excelente! Estás en el rango ideal.';
+        else if (v < 8) sleepMsg.textContent = 'Te faltó un poco. Intenta dormir antes hoy.';
+        else sleepMsg.textContent = 'Bien, pero evita excederte para no sentirte atontad@.';
+      };
+      sleep.addEventListener('input', updateSleep);
+      updateSleep();
+    }
+
+    // Actividad
+    var min = document.getElementById('info3-min');
+    var strength = document.getElementById('info3-strength');
+    var actMsg = document.getElementById('info3-activityMsg');
+    function updateActivity(){
+      if(!min || !strength || !actMsg) return;
+      var m = parseInt(min.value || 0, 10);
+      var s = parseInt(strength.value || 0, 10);
+      var okMin = m >= 150, okStr = s >= 2;
+      actMsg.style.color = (okMin && okStr) ? '#16a34a' : '#0f172a';
+      actMsg.textContent = (okMin && okStr)
+        ? '¡Objetivo semanal cumplido! 🔥'
+        : 'Sigue sumando minutos y fuerza (150–300 min + 2–3 días).';
+    }
+    if(min && strength){ min.addEventListener('input', updateActivity); strength.addEventListener('input', updateActivity); updateActivity(); }
+
+    // Hidratación
+    var weight = document.getElementById('info3-weight');
+    var calc = document.getElementById('info3-calc');
+    var waterMsg = document.getElementById('info3-waterMsg');
+    if (calc) calc.addEventListener('click', function(){
+      var w = parseFloat(weight.value || 0);
+      if (w <= 0) { waterMsg.textContent = 'Ingresa un peso válido.'; waterMsg.style.color = '#0f172a'; return; }
+      var ml = Math.round(w * 35); // guía simple ~35 ml/kg
+      var vasos = Math.round(ml / 250);
+      waterMsg.style.color = '#16a34a';
+      waterMsg.textContent = 'Meta orientativa: ' + ml + ' ml/día (~' + vasos + ' vasos).';
+    });
+
+    // Checklist + progreso
+    var checks = document.querySelectorAll('.info3-check');
+    var bar = document.getElementById('info3-progress');
+    var txt = document.getElementById('info3-progressText');
+    function updateProgress(){
+      if(!bar || !txt) return;
+      var total = checks.length, done = 0;
+      checks.forEach(function(c){ if(c.checked) done++; });
+      var pct = Math.round((done/total)*100);
+      bar.style.width = pct + '%';
+      txt.textContent = pct + '%';
+    }
+    checks.forEach(function(c){ c.addEventListener('change', updateProgress); });
+    updateProgress();
+  })();
+</script>
 
 <h1 style="text-align:center;font-size:40px;margin:20px 0;color:var(--accent);font-family:Rubik, sans-serif;">☀️ Desayunos</h1>
 
